@@ -1,0 +1,5 @@
+@import 'mainPage.css';
+
+.row{
+    --bs-gutter-x:0!important;
+}
