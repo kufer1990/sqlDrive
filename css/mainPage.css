@@ -1,7 +1,8 @@
-body{
+body {
     height: 100vh;
 }
-.btn-section{
+
+.btn-section {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,12 +10,12 @@ body{
     text-decoration: none;
     font-size: 2.5rem;
     background-color: rgb(47, 128, 187);
-    color:rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
     cursor: pointer;
     transition: .5s;
 }
 
-.btn-section:hover{
+.btn-section:hover {
     background-color: rgb(168, 218, 253);
-    color:rgb(21, 67, 142);
+    color: rgb(21, 67, 142);
 }

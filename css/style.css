@@ -1,5 +1,12 @@
 @import 'mainPage.css';
+@import 'choiceinstitution.css';
 
-.row{
-    --bs-gutter-x:0!important;
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.row {
+    --bs-gutter-x: 0 !important;
 }
