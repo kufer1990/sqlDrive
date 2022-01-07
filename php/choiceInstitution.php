@@ -1,21 +1,10 @@
 <?php 
 include 'components/header.php';
-include 'components/navbar.php';
-
+// include 'components/navbar.php';
 include 'components/connect.php';
-// $SELECT_NEIGH="SELECT * FROM `okręgi`";
-// $conn->exec($SELECT_NEIGH)
-$dbh = $conn->query('SELECT * FROM `okręgi`');
-
-// while($row = $dbh->fetch()){
-//     global $Neigh;
-//     $Neigh = $row[1];
-//     echo $Neigh ;
-// }
-// header("Refresh:0.5 ");
+$choiceIdNeigh = "";
 ?>
 <div class="bg-mySite">
-    <!-- <img src="../img/watercolor-ga2e23b0ff_1280.png" alt=""> -->
     <img src="../img/background-g88c946023_1280.jpg" alt="">
 </div>
 <div class="container">
@@ -26,7 +15,9 @@ $dbh = $conn->query('SELECT * FROM `okręgi`');
     </div>
     <div class="row justify-content-center">
         <div class="col-md-12 col-lg-12">
-            <table class="table text-center">
+            <!-- //////////////////////////////////////////////////////////// -->
+            <form method="post">
+            <table class="table text-center firstTableNeigh">
                 <thead class="thead-dark">
                     <tr>
                         <th scope="col" class='tableItem'>#</th>
@@ -36,6 +27,7 @@ $dbh = $conn->query('SELECT * FROM `okręgi`');
                 </thead>
                 <tbody>
             <?php 
+            $dbh = $conn->query('SELECT * FROM `okręgi`');
             $i=0;
                 while($row=$dbh->fetch()){    
                     $i++;
@@ -43,27 +35,21 @@ $dbh = $conn->query('SELECT * FROM `okręgi`');
                     $table = $row[1];
                     echo "<tr>
                     <th scope='row' class='tableItem'>$i</th>
-                    <td class='tableItem'>";
+                    <td class='tableItem' id='choiceNeighName$i'>";
                     echo $table;
                     echo "</td>
-                    <td><i class='far fa-edit tableItem tdTableItem' id='choiceNeigh$i'></i></td>
+                    <td><i class='far fa-edit tableItem tdTableItem' id='$i'></i></td>
                     </tr>";
-                };
-                
-                
+                };               
            ?>
-
-
-
-
-                    <!-- <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td><i class="far fa-edit"></i></td>
-                    </tr> -->
                 </tbody>
             </table>
+         <button type="submit" class="d-none" id="btnSendChoiceFirstTable"></button>
+            </form>
+<!-- /////////////////////////////////////////////////////////////////////////// -->
+<div class="render">
 
+</div>
         </div>
     </div>
 </div>
