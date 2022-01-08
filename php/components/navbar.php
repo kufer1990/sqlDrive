@@ -9,7 +9,7 @@
         <a class="nav-link" href="mainPage.php">Strona Główna <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
+        <a class="nav-link" href="choiceInstitution.php">Szkoła</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Pricing</a>

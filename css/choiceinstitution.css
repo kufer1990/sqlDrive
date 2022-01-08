@@ -1,18 +1,20 @@
-.bg-mySite{
+.bg-mySite {
     position: fixed;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     width: 100vw;
     height: 100vh;
     /* border: 10px solid red; */
     z-index: -100;
-    opacity: 0.4;
+    opacity: 0.2;
 
 }
-.bg-mySite>img{
+
+.bg-mySite>img {
     width: 100%;
     height: 100%;
 }
+
 .sectionTitleChoiceInstitution {
     /* margin-top: 50%; */
     text-transform: uppercase;
@@ -24,32 +26,33 @@
     font-size: 1.5rem;
 }
 
-.tableItem{
-    /* color: rgba(4, 74, 132, 0.597);*/
-    color:rgb(6, 21, 12);
-    /* font-weight: bold; */
+.tableItem {
+    vertical-align: middle;
+    color: rgb(6, 21, 12);
 }
 
-.fa-edit{
+.fa-edit {
     cursor: pointer;
     transition: .5s;
 }
 
-.fa-edit:hover{
-    color:rgb(54, 222, 122);
+.fa-edit:hover {
+    color: rgb(54, 222, 122);
 }
-@media(max-width:1000px){
+
+@media(max-width:1000px) {
     .tableItem {
         font-size: 1rem;
     }
 }
 
 
-@media (min-width:1000px){
+@media (min-width:1000px) {
     .table {
         font-size: 1.5rem;
     }
-      .table {
+
+    .table {
         font-size: 1.5rem;
     }
 }

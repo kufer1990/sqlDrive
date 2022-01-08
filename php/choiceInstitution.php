@@ -1,6 +1,6 @@
 <?php 
 include 'components/header.php';
-// include 'components/navbar.php';
+include 'components/navbar.php';
 include 'components/connect.php';
 $choiceIdNeigh = "";
 ?>
@@ -16,7 +16,7 @@ $choiceIdNeigh = "";
     <div class="row justify-content-center">
         <div class="col-md-12 col-lg-12">
             <!-- //////////////////////////////////////////////////////////// -->
-            <form method="post">
+            <form action="choiceSchool.php" method="post">
             <table class="table text-center firstTableNeigh">
                 <thead class="thead-dark">
                     <tr>
@@ -44,15 +44,10 @@ $choiceIdNeigh = "";
            ?>
                 </tbody>
             </table>
+            <input type="text" class="d-none" name="inputNeighClickValue" id='inputNeighClickValue'>
          <button type="submit" class="d-none" id="btnSendChoiceFirstTable"></button>
             </form>
-<!-- /////////////////////////////////////////////////////////////////////////// -->
-<div class="render">
 
-</div>
-        </div>
-    </div>
-</div>
 
 </body>
 <!-- fild for scripts js -->
