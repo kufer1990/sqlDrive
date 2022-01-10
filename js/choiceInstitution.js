@@ -9,6 +9,10 @@ iconClickElement.forEach(element => {
            })
 });
 
+document.querySelector('.btnAddInstitution').addEventListener('click', ()=>{
+    document.querySelector('.addElementPopUp').style.visibility ="inherit";
+    document.querySelector('.formSectionNeigh').style.visibility="inherit";
+});
 
 
 

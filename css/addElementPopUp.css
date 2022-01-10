@@ -1,0 +1,44 @@
+#closeButton {
+    font-size: 1.8rem;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    top: 3%;
+    right: 3%;
+    background-color: rgba(255, 9, 9, 0);
+    border: 1px solid #fff;
+    color: #fff;
+    transition: .5s;
+}
+
+#closeButton:hover {
+    color: rgb(0, 0, 0);
+    border: 1px solid #000;
+}
+
+.addElementPopUp {
+    visibility:hidden;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 50%;
+    background-color: rgba(0, 0, 0, 0.854);
+}
+
+.formSectionNeigh {
+    visibility:hidden;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media(max-width:1000px) {
+    .addElementPopUp {
+        width: 100%;
+    }
+}
+
+

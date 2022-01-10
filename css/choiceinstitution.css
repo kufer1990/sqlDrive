@@ -4,7 +4,6 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    /* border: 10px solid red; */
     z-index: -100;
     opacity: 0.2;
 
@@ -16,7 +15,6 @@
 }
 
 .sectionTitleChoiceInstitution {
-    /* margin-top: 50%; */
     text-transform: uppercase;
     font-size: 1.8rem;
 }
@@ -28,6 +26,7 @@
 
 .tableItem {
     vertical-align: middle;
+    font-weight: normal;
     color: rgb(6, 21, 12);
 }
 
@@ -37,8 +36,24 @@
 }
 
 .fa-edit:hover {
-    color: rgb(54, 222, 122);
+   color: rgb(60, 147, 209);
 }
+
+.btnAddInstitution{
+    padding: 5px 20px;
+    font-size: 1.3rem;
+    background-color: rgba(243, 232, 232, 0);
+    border: 1px solid rgb(43, 66, 87);
+    transition: .5s;
+}
+
+.btnAddInstitution:hover{
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(60, 147, 209);
+}
+
+
+
 
 @media(max-width:1000px) {
     .tableItem {

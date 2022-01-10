@@ -5,6 +5,7 @@ include 'components/connect.php';
 include 'components/bgComponent.php';
 
 $choiceNeigh = $_POST['inputNeighClickValue'];
+
 $result =$conn->query("SELECT * FROM `okręgi` WHERE `Okreg` = '$choiceNeigh'");
 while($row= $result->fetch()){
     global $choiceIdOkregi;
@@ -19,7 +20,7 @@ $result2 = $conn->query("SELECT * FROM `placówki` WHERE `ID_OKRĘG` = $choideId
     <div class="row sectionTitleChoiceInstitution">
         <div class="col-12 text-center mt-5 mb-5">
             <h1>
-                <p>Wybierz Swój Okręg</p>
+                <p><?php echo $choiceNeigh?></p>
             </h1>
         </div>
     </div>

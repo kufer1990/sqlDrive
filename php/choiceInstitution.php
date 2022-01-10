@@ -3,14 +3,20 @@ include 'components/header.php';
 include 'components/navbar.php';
 include 'components/connect.php';
 include 'components/bgComponent.php';
+include 'components/addElementPopUp.php';
 $choiceIdNeigh = "";
 ?>
 <div class="container">
     <div class="row sectionTitleChoiceInstitution">
-        <div class="col-12 text-center mt-5 mb-5">
-            <h1>
+        <div class="col-12 text-center mt-5 mb-5 __fontColor">
+            <h3>
                 <p>Wybierz Swój Okręg</p>
-            </h1>
+            </h3>
+        </div>
+    </div>
+    <div class="row sectionTitleChoiceInstitution">
+        <div class="col-12 text-center mt-2 mb-2">
+          <button class="btnAddInstitution __fontColor">Dodaj lub usuń okręgi</button>
         </div>
     </div>
     <div class="row justify-content-center">
@@ -20,9 +26,9 @@ $choiceIdNeigh = "";
                     <table class="table text-center firstTableNeigh">
                         <thead class="thead-dark">
                             <tr>
-                                <th scope="col" class='tableItem'>#</th>
-                                <th scope="col" class='tableItem'>OKRĘGI</th>
-                                <th scope="col" class='tableItem'>Wejście</th>
+                                <th scope="col" class='tableItem __fontColor'>#</th>
+                                <th scope="col" class='tableItem __fontColor'>OKRĘGI</th>
+                                <th scope="col" class='tableItem __fontColor'>Wejście</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -34,11 +40,11 @@ $choiceIdNeigh = "";
                     global $table; 
                     $table = $row[1];
                     echo "<tr>
-                    <th scope='row' class='tableItem'>$i</th>
-                    <td class='tableItem' id='choiceNeighName$i'>";
+                    <th scope='row' class='tableItem __fontColor'>$i</th>
+                    <td class='tableItem __fontColor' id='choiceNeighName$i'>";
                     echo $table;
                     echo "</td>
-                    <td><i class='far fa-edit tableItem tdTableItem' id='$i'></i></td>
+                    <td><i class='far fa-edit tableItem tdTableItem __fontColor' id='$i'></i></td>
                     </tr>";
                 };               
                      ?>

@@ -1,5 +1,6 @@
 @import 'mainPage.css';
 @import 'choiceinstitution.css';
+@import 'addElementPopUp.css';
 
 body {
     margin: 0;
@@ -9,4 +10,8 @@ body {
 
 .row {
     --bs-gutter-x: 0 !important;
+}
+
+.__fontColor{
+    color: rgb(43, 66, 87);
 }
