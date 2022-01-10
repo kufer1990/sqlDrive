@@ -1,3 +1,6 @@
+<?php
+// header('refresh: .5')
+?>
 <!-- wypełnienie okna przeglądarki -->
 <div class="row addElementPopUp">
     <div class="col-12">
@@ -13,8 +16,8 @@
 <div class="row text-center formSectionNeigh">
     <form method="POST">
     <div class="col-12"><input class="w-100 text-center p-2 addNeighInput" name ="addNeighInput" type="text" placeholder="Nazwa Okręgu"></div>
-    <div class="col-12"><button class="w-100 p-2 mt-2 addNeighButton" type="submit">Dodaj Okręg</button></div>
-    <div class="col-12"><button class="w-100 p-2 mt-2 deleteNeighButton" type="submit">Usuń Okręg</button></div>
+    <div class="col-12"><button class="w-100 __fontColor p-2 mt-2 btnNeigh addNeighButton" type="submit">Dodaj Okręg</button></div>
+    <div class="col-12"><button class="w-100 __fontColor p-2 mt-2 btnNeigh deleteNeighButton" type="submit">Usuń Okręg</button></div>
     </form>
 </div>
     </div>
