@@ -3,6 +3,7 @@ include 'components/header.php';
 include 'components/navbar.php';
 include 'components/connect.php';
 include 'components/bgComponent.php';
+include 'components/addElementPopUp.php';
 
 $choiceNeigh = $_POST['inputNeighClickValue'];
 
@@ -22,6 +23,11 @@ $result2 = $conn->query("SELECT * FROM `placówki` WHERE `ID_OKRĘG` = $choideId
             <h1>
                 <p><?php echo $choiceNeigh?></p>
             </h1>
+        </div>
+    </div>
+    <div class="row sectionTitleChoiceInstitution">
+        <div class="col-12 text-center mt-2 mb-2">
+          <button class="btnAddSchool __fontColor">Dodaj lub usuń okręgi</button>
         </div>
     </div>
     <div class="row justify-content-center">
@@ -62,6 +68,7 @@ $result2 = $conn->query("SELECT * FROM `placówki` WHERE `ID_OKRĘG` = $choideId
                 <button type="submit" class="d-none" id="btnSendChoiceFirstTable"></button>
             </form>
             </body>
-            <script src="../js/choiceInstitution.js"></script>
+            <script src="../js/choiceSchool.js"></script>
+            <!-- <script src="../js/choiceInstitution.js"></script> -->
             <?php
             include 'components/footer.php';

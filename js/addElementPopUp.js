@@ -1,9 +1,9 @@
 document.querySelector('#closeButton').addEventListener('click', () => {
     document.querySelector('.addElementPopUp').style.visibility = "hidden";
+    document.querySelector('.addNeighButton').style.transition = "0s";
+    document.querySelector('.deleteNeighButton').style.transition = "0s";  
     document.querySelector('#closeButton').style.transition = "0s";
 })
-
-
 
 // usunięcie okręgu z bazy
 const addNeighInput = document.querySelector('.addNeighInput');
@@ -15,8 +15,6 @@ document.querySelector('.deleteNeighButton').addEventListener('click', () => {
     }
 })
 
-
-
 // klik przycisku sprawdza czy input nie jest pusty i wywołuje ajax 
 // przekazuje parametr dodawanego okręgu oraz drugi parametr akcji. czy dodajemy okręg, szkołe, itp
 document.querySelector('.addNeighButton').addEventListener('click', () => {
@@ -27,6 +25,23 @@ document.querySelector('.addNeighButton').addEventListener('click', () => {
     }
 })
 
+
+document.querySelector('.addSchollButton').addEventListener('click',()=>{
+const addSchoolInput = [...document.querySelectorAll('.addSchoolInput')];
+
+// walidacja formularza
+
+addSchoolInput.forEach(element => {
+    if(element.value===""){
+        console.log('wypelnij formularz');
+        
+    }
+    // console.log(addSchoolInput[0].value);   
+    
+});
+
+    
+})
 
 
 
@@ -44,5 +59,8 @@ function ajaxSend(sendElement, whatRun) {
     }
     xhr.open('POST', '../php/components/addElementToDB.php', true);
     xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-    xhr.send('sendElement=' + sendElement + '&whatRun=' + whatRun);
+
+    if(whatRum==="neigh"){
+    xhr.send('sendElement=' + sendElement + '&whatRun=' + whatRun);}
+
 }
