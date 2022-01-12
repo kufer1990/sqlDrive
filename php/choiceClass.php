@@ -4,15 +4,32 @@ include 'components/navbar.php';
 include 'components/connect.php';
 include 'components/bgComponent.php';
 // $choiceNeigh = $_POST['inputNeighClickValue'];
-$choiceNeigh = $_POST['inputNeighClickValue'];
-$result =$conn->query("SELECT * FROM `klasa` WHERE `ID_PLACOWKI` = '$choiceNeigh'");
+
+$neighId=$_POST['okregId'];
+$neighNameConn = $conn->query("SELECT * FROM `okręgi` WHERE `OkregID` = '$neighId'");
+while($row2=$neighNameConn->fetch()){
+    global $neighNameToRender;
+    $neighNameToRender = $row2[1];
+}
+
+
+$choiceSchoolID = $_POST['inputNeighClickValue'];
+$result =$conn->query("SELECT * FROM `klasa` WHERE `ID_PLACOWKI` = '$choiceSchoolID '");
+$schoolNameConn= $conn->query("SELECT * FROM `placówki` WHERE `PlacowkiID` = $choiceSchoolID");
+while($row3=$schoolNameConn->fetch()){
+    global $schoolNameToRender;
+    $schoolNameToRender = $row3[1];
+}
+
+
+
 ?>
 <div class="container">
     <div class="row sectionTitleChoiceInstitution">
-        <div class="col-12 text-center mt-5 mb-5">
-            <h1>
-                <p>Wybierz Swój Okręg</p>
-            </h1>
+        <div class="col-12 text-center mt-5 mb-5 __fontColor">
+            <h3>
+                <p><?php echo $neighNameToRender." > ".$schoolNameToRender ?></p>
+            </h3>
         </div>
     </div>
     <div class="row justify-content-center">

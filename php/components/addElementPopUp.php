@@ -35,8 +35,8 @@
                 <div class="col-12"><input class="w-100 text-center p-2 mt-2 addSchoolInput" name="addSchoolInputPhone" type="text" placeholder="Numer Tel"></div>           
             </form>
             <div class="col-12"><button class="addSchollButton mt-2">Dodaj Element</button></div>
-
         </div>
+        
 
 
 

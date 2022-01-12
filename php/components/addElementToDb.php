@@ -3,7 +3,7 @@
 
 //sprawdzenie jaka operacja  jest wykonywana i pobranie zmiennych ze strony
 $whatRun= $_POST['whatRun'];
-if($whatRun==='neigh'||$whatRun==='deleteNeigh'){
+if($whatRun==='neigh'||$whatRun==='deleteNeigh'||$whatRun==='deleteSchool'){
     $sendElement = $_POST['sendElement'];
 }
 else if(($whatRun==='addSchool')){
@@ -20,6 +20,8 @@ addNeighTodb($sendElement);
 deleteNeighTodb($sendElement); 
 }else if($whatRun==="addSchool"){
 addSchoolToDb($sendElement);
+}else if($whatRun==="deleteSchool"){
+deleteSchoolWithDb($sendElement);
 }
 
 
@@ -32,6 +34,13 @@ function addSchoolToDb($sendElement){
     include 'connect.php';
     $conn->query("INSERT INTO `placówki` VALUES ('','$sendElement->name','$sendElement->street','$sendElement->postCode','$sendElement->city','$sendElement->phone',$sendElement->idokregi)");
     echo "Placówka została dodana pomyślnie";
+}
+// delete School
+function deleteSchoolWithDb($sendElement){
+    // print_r($sendElement);
+    include 'connect.php';
+    $conn->query("DELETE FROM `placówki` WHERE `Nazwa` = '$sendElement'");
+    echo "Element został usunięty";
 }
 
 // add neigh
@@ -48,6 +57,3 @@ function deleteNeighTodb($sendElement){
 $conn->query("DELETE FROM `okręgi` WHERE `Okreg` = '$sendElement'");
 echo "Okręg został pomyślnie usunięty";
 }
-
-
-

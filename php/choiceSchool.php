@@ -18,15 +18,16 @@ $result2 = $conn->query("SELECT * FROM `placówki` WHERE `ID_OKRĘG` = $choiceId
 ?>
 <div class="container">
     <div class="row sectionTitleChoiceInstitution">
-        <div class="col-12 text-center mt-5 mb-5">
-            <h1>
+        <div class="col-12 text-center mt-5 mb-5 __fontColor">
+            <h3>
                 <p><?php echo $choiceNeigh?></p>
-            </h1>
+            </h3>
         </div>
     </div>
     <div class="row sectionTitleChoiceInstitution">
         <div class="col-12 text-center mt-2 mb-2">
-          <button class="btnAddSchool __fontColor">Dodaj lub usuń okręgi</button>
+          <button class="btnAddSchool __fontColor">Dodaj Placówkę</button>
+          <button class="btnDeleteSchool __fontColor">Usuń Placówkę</button>
         </div>
     </div>
     <div class="row justify-content-center">
@@ -37,6 +38,7 @@ $result2 = $conn->query("SELECT * FROM `placówki` WHERE `ID_OKRĘG` = $choiceId
                         <thead class="thead-dark">
                             <tr>
                                 <th scope="col" class='tableItem'>#</th>
+                                <th scope="col" class='tableItem'></th>
                                 <th scope="col" class='tableItem'>NAZWA</th>
                                 <th scope="col" class='tableItem'>ULICA</th>
                                 <th scope="col" class='tableItem'>KOD POCZTOWY</th>
@@ -52,7 +54,8 @@ $result2 = $conn->query("SELECT * FROM `placówki` WHERE `ID_OKRĘG` = $choiceId
                          $i++;
                         echo "<tr><th scope='row' class='tableItem'>$i</th>
                         <td class='tableItem d-none' id='choiceNeighName$i'>$row2[0]</td>
-                        <td class='tableItem'>$row2[1]</td>
+                        <td class='tableItem'><input type='checkbox'id='checkbox$i' class='schoolCheckbox''/></td>
+                        <td class='tableItem' id='nameContent-checkbox$i'>$row2[1]</td>
                         <td class='tableItem'>$row2[2]</td>
                         <td class='tableItem'>$row2[3]</td>
                         <td class='tableItem'>$row2[4]</td>
@@ -64,7 +67,7 @@ $result2 = $conn->query("SELECT * FROM `placówki` WHERE `ID_OKRĘG` = $choiceId
                     </table>
                 </div>
                 <input type="text" class="d-none" name="inputNeighClickValue" id='inputNeighClickValue'>
-                <input type="text" class="d-none" id="okregId" value="<?php echo $choiceIdOkregi?>"/>
+                <input type="text" class="d-none" name="okregId" id="okregId" value="<?php echo $choiceIdOkregi?>"/>
                 <button type="submit" class="d-none" id="btnSendChoiceFirstTable"></button>
             </form>
             </body>

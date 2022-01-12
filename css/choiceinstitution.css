@@ -28,7 +28,7 @@
     color: white;
 }
 
-.btnAddInstitution, .btnAddSchool {
+.btnAddInstitution, .btnAddSchool, .btnDeleteSchool {
     padding: 5px 20px;
     font-size: 1.3rem;
     background-color: rgba(243, 232, 232, 0);
