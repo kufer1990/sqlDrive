@@ -10,11 +10,10 @@ $choiceNeigh = $_POST['inputNeighClickValue'];
 $result =$conn->query("SELECT * FROM `okręgi` WHERE `Okreg` = '$choiceNeigh'");
 while($row= $result->fetch()){
     global $choiceIdOkregi;
-    $choideIdOkregi = $row[0];
-    echo $choiceIdOkregi;
+    $choiceIdOkregi = $row[0];
 }
 
-$result2 = $conn->query("SELECT * FROM `placówki` WHERE `ID_OKRĘG` = $choideIdOkregi");
+$result2 = $conn->query("SELECT * FROM `placówki` WHERE `ID_OKRĘG` = $choiceIdOkregi");
 
 ?>
 <div class="container">
@@ -65,6 +64,7 @@ $result2 = $conn->query("SELECT * FROM `placówki` WHERE `ID_OKRĘG` = $choideId
                     </table>
                 </div>
                 <input type="text" class="d-none" name="inputNeighClickValue" id='inputNeighClickValue'>
+                <input type="text" class="d-none" id="okregId" value="<?php echo $choiceIdOkregi?>"/>
                 <button type="submit" class="d-none" id="btnSendChoiceFirstTable"></button>
             </form>
             </body>

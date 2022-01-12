@@ -13,6 +13,7 @@
 
 
         <!-- sekcja formularz okręg-->
+        <!-- dodalem display none ktory trzeba usunac -->
         <div class="row text-center formSectionNeigh">
             <form method="POST">
                 <div class="col-12"><input class="w-100 text-center p-2 addNeighInput" name="addNeighInput" type="text"
@@ -34,7 +35,7 @@
                 <div class="col-12"><input class="w-100 text-center p-2 mt-2 addSchoolInput" name="addSchoolInputPhone" type="text" placeholder="Numer Tel"></div>           
             </form>
             <div class="col-12"><button class="addSchollButton mt-2">Dodaj Element</button></div>
-             <!-- <div class="col-12"><input class="w-100 text-center p-2 addSchoolInput" name="addSchoolInput" type="text" placeholder="Numer Tel"></div> -->
+
         </div>
 
 
