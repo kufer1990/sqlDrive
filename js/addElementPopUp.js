@@ -69,6 +69,7 @@ document.querySelector('.addSchollButton').addEventListener('click', () => {
 })
 
 
+
 //funkcja przyjmuje przesłany element do dodania i akcję którą wykonuje;
 function ajaxSend(sendElement, whatRun) {
     xhr = new XMLHttpRequest;

@@ -3,7 +3,7 @@
 
 //sprawdzenie jaka operacja  jest wykonywana i pobranie zmiennych ze strony
 $whatRun= $_POST['whatRun'];
-if($whatRun==='neigh'||$whatRun==='deleteNeigh'||$whatRun==='deleteSchool'){
+if($whatRun==='neigh'||$whatRun==='deleteNeigh'||$whatRun==='deleteSchool'||$whatRun==='addClassToDb'){
     $sendElement = $_POST['sendElement'];
 }
 else if(($whatRun==='addSchool')){
@@ -22,6 +22,8 @@ deleteNeighTodb($sendElement);
 addSchoolToDb($sendElement);
 }else if($whatRun==="deleteSchool"){
 deleteSchoolWithDb($sendElement);
+}else if($whatRun==='addClassToDb'){
+    addClassToDb($sendElement);
 }
 
 
@@ -56,4 +58,14 @@ function deleteNeighTodb($sendElement){
     include 'connect.php';
 $conn->query("DELETE FROM `okręgi` WHERE `Okreg` = '$sendElement'");
 echo "Okręg został pomyślnie usunięty";
+}
+
+
+// add class
+function addClassToDb($sendElement){
+    echo "dziła xhr";
+
+// KlasaID,Klasa,ID_PLACOWKI,ID_OKREG
+
+
 }

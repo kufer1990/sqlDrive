@@ -39,7 +39,7 @@
 
         <div class="row text-center formSectionClass">
             <form method="POST">
-                 <div class="col-12"><input class="w-100 text-center p-2 addNeighInput" name="addNeighInput" type="text"
+                 <div class="col-12"><input class="w-100 text-center p-2 addClassInput" name="addNeighInput" type="text"
                         placeholder="Nazwa Klasy"></div>
               
             </form>
