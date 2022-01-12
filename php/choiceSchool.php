@@ -26,6 +26,7 @@ $result2 = $conn->query("SELECT * FROM `placówki` WHERE `ID_OKRĘG` = $choiceId
     </div>
     <div class="row sectionTitleChoiceInstitution">
         <div class="col-12 text-center mt-2 mb-2">
+        <a href="../php/choiceInstitution.php"><button class="btnReturn __fontColor">Wstecz</button></a>
           <button class="btnAddSchool __fontColor">Dodaj Placówkę</button>
           <button class="btnDeleteSchool __fontColor">Usuń Placówkę</button>
         </div>

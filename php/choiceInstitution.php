@@ -16,6 +16,8 @@ $choiceIdNeigh = "";
     </div>
     <div class="row sectionTitleChoiceInstitution">
         <div class="col-12 text-center mt-2 mb-2">
+
+          <a href="../php/mainPage.php"><button class="btnReturn __fontColor">Wstecz</button></a>
           <button class="btnAddInstitution __fontColor">Dodaj lub usuń okręgi</button>
         </div>
     </div>

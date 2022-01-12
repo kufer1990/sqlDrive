@@ -3,6 +3,7 @@ include 'components/header.php';
 include 'components/navbar.php';
 include 'components/connect.php';
 include 'components/bgComponent.php';
+include 'components/addElementPopUp.php';
 // $choiceNeigh = $_POST['inputNeighClickValue'];
 
 $neighId=$_POST['okregId'];
@@ -32,6 +33,20 @@ while($row3=$schoolNameConn->fetch()){
             </h3>
         </div>
     </div>
+    <div class="row sectionTitleChoiceInstitution">
+        <div class="col-12 text-center mt-2 mb-2">
+
+
+
+     <a href="../php/choiceInstitution.php" class="text-decoration-none">
+              <button class="btnReturn __fontColor">Wstecz</button>
+            </a>
+          <button class="btnAddClass __fontColor">Dodaj lub usuń klasę</button>
+        </div>
+    </div>
+
+
+
     <div class="row justify-content-center">
         <div class="col-md-12 col-lg-12">
                       <form action="choiceMember.php" method="post">
@@ -66,6 +81,6 @@ while($row3=$schoolNameConn->fetch()){
             <button type="submit" class="d-none" id="btnSendChoiceFirstTable"></button>
             </form>
             </body>
-            <script src="../js/choiceMember.js"></script>
+            <script src="../js/choiceClass.js"></script>
             <?php
             include 'components/footer.php';

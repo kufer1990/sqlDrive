@@ -28,7 +28,12 @@
     color: white;
 }
 
-.btnAddInstitution, .btnAddSchool, .btnDeleteSchool {
+.btnAddInstitution,
+.btnAddSchool,
+.btnDeleteSchool,
+.btnReturn,
+.btnAddClass {
+    width: 30%;
     padding: 5px 20px;
     font-size: 1.3rem;
     background-color: rgba(243, 232, 232, 0);
@@ -36,7 +41,11 @@
     transition: .5s;
 }
 
-.btnAddInstitution:hover {
+.btnAddInstitution:hover,
+.btnAddSchool:hover,
+.btnDeleteSchool:hover,
+.btnReturn:hover,
+.btnAddClass:hover {
     background-color: rgb(255, 255, 255);
     border: 1px solid white;
     ;
@@ -49,8 +58,18 @@
     .tableItem {
         font-size: 1rem;
     }
-}
 
+    .btnAddInstitution,
+    .btnAddSchool,
+    .btnDeleteSchool,
+    .btnReturn,
+    .btnAddClass {
+        margin: 1% 0;
+        width: 100%;
+    }
+
+
+}
 
 @media (min-width:1000px) {
     .table {
