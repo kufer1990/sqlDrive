@@ -32,8 +32,12 @@ const addSchoolInput = [...document.querySelectorAll('.addSchoolInput')];
 // walidacja formularza
 
 addSchoolInput.forEach(element => {
+console.log(typeof(addSchoolInput[0].value));
+
+
     if(element.value===""){
-        console.log('wypelnij formularz');
+  
+        
         
     }
     // console.log(addSchoolInput[0].value);   
