@@ -3,10 +3,10 @@
 
 //sprawdzenie jaka operacja  jest wykonywana i pobranie zmiennych ze strony
 $whatRun= $_POST['whatRun'];
-if($whatRun==='neigh'||$whatRun==='deleteNeigh'||$whatRun==='deleteSchool'||$whatRun==='addClassToDb'){
+if($whatRun==='neigh'||$whatRun==='deleteNeigh'||$whatRun==='deleteSchool'||$whatRun ==='deleteClass'){
     $sendElement = $_POST['sendElement'];
 }
-else if(($whatRun==='addSchool')){
+else if($whatRun==='addSchool'||$whatRun==='addClassToDb'){
     $sendElement=json_decode($_POST['sendElement']);
 }
 
@@ -15,15 +15,17 @@ else if(($whatRun==='addSchool')){
 
 //wywolanie odpowiedniego zapytania wzaleznosci od tego co chcemy zrobic
 if($whatRun==="neigh"){
-addNeighTodb($sendElement);
+    addNeighTodb($sendElement);
 }else if ($whatRun ==="deleteNeigh"){
-deleteNeighTodb($sendElement); 
+    deleteNeighTodb($sendElement); 
 }else if($whatRun==="addSchool"){
-addSchoolToDb($sendElement);
+    addSchoolToDb($sendElement);
 }else if($whatRun==="deleteSchool"){
-deleteSchoolWithDb($sendElement);
+    deleteSchoolWithDb($sendElement);
 }else if($whatRun==='addClassToDb'){
     addClassToDb($sendElement);
+}else if($whatRun==='deleteClass'){
+    deleteClassWithDB($sendElement);
 }
 
 
@@ -63,9 +65,21 @@ echo "Okręg został pomyślnie usunięty";
 
 // add class
 function addClassToDb($sendElement){
-    echo "dziła xhr";
+    include 'connect.php';
+    $conn->query("INSERT INTO `klasa` VALUES ('','$sendElement->addClassInput', '$sendElement->schoolID', '$sendElement->neighID')");
+echo "Klasa została stworzona";
+}
 
-// KlasaID,Klasa,ID_PLACOWKI,ID_OKREG
+//deleteClass
+function deleteClassWithDB($sendElement){
+    include 'connect.php';
+    $result = $conn->query("SELECT `KlasaID` FROM `klasa` WHERE `Klasa` = '$sendElement'");
 
+while($row = $result->fetch()){
+    global $idClassToDelete;
+    $idClassToDelete = $row[0];
+}
+     $conn->query("DELETE FROM `klasa` WHERE `KlasaID` = $idClassToDelete");
+     echo "Element został usunięty";
 
 }

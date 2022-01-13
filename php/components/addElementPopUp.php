@@ -34,7 +34,7 @@
                 <div class="col-12"><input class="w-100 text-center p-2 mt-2 addSchoolInput" name="addSchoolInputCity" type="text" placeholder="Miasto"></div>
                 <div class="col-12"><input class="w-100 text-center p-2 mt-2 addSchoolInput" name="addSchoolInputPhone" type="text" placeholder="Numer Tel"></div>           
             </form>
-            <div class="col-12"><button class="addSchollButton mt-2 d-none">Dodaj Element</button></div>
+            <div class="col-12"><button class="addSchollButton mt-2">Dodaj Element</button></div>
         </div>
 
         <div class="row text-center formSectionClass">
@@ -45,8 +45,8 @@
             </form>
             <div class="col-12"><button class="w-100 __fontColor p-2 mt-2  btnNeigh addClassButton"
                         >Dodaj Klasę</button></div>
-                <div class="col-12"><button class="w-100 __fontColor p-2 mt-2 btnNeigh deleteClassButton"
-                        >Usuń Klasę</button></div>
+                <!-- <div class="col-12"><button class="w-100 __fontColor p-2 mt-2 btnNeigh deleteClassButton"
+                        >Usuń Klasę</button></div> -->
         </div>
         
 

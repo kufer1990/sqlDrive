@@ -1,4 +1,12 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+<style>
+  .nav-link:hover{
+color:rgb(152, 136, 237)!important;
+transition: .5s;
+  }
+</style>
+<!-- 248,249,250 -->
+<nav class="navbar navbar-expand-lg navbar-light p-3 border-bottom">
   <!-- <a class="navbar-brand m-3" href="#">Navbar</a> -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -27,3 +35,14 @@
     </ul>
   </div>
 </nav>
+
+<script>
+  document.querySelectorAll('.nav-link').forEach((element)=>{
+    element.addEventListener('mouseover',()=>{
+document.querySelector('.navbar').style.background ="#ece8f8";
+document.querySelector('.navbar').style.transition =".5s";
+  })
+  element.addEventListener('mouseout',()=>{ 
+    document.querySelector('.navbar').style.background ="#d4c8f500";})
+ })
+</script>

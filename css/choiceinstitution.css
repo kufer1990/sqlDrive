@@ -32,7 +32,8 @@
 .btnAddSchool,
 .btnDeleteSchool,
 .btnReturn,
-.btnAddClass {
+.btnAddClass,
+.btnDeleteClass {
     width: 30%;
     padding: 5px 20px;
     font-size: 1.3rem;
@@ -45,7 +46,8 @@
 .btnAddSchool:hover,
 .btnDeleteSchool:hover,
 .btnReturn:hover,
-.btnAddClass:hover {
+.btnAddClass:hover,
+.btnDeleteClass:hover {
     background-color: rgb(255, 255, 255);
     border: 1px solid white;
     ;

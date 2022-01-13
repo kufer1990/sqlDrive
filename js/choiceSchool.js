@@ -23,6 +23,7 @@ arrayCheckBox.forEach(element=>{
 element.addEventListener('click',()=>{
 nameSchoolToDelete = document.querySelector(` #nameContent-${element.id}`).textContent;
 
+
 })
 });
 

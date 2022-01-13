@@ -41,7 +41,8 @@ while($row3=$schoolNameConn->fetch()){
      <a href="../php/choiceInstitution.php" class="text-decoration-none">
               <button class="btnReturn __fontColor">Wstecz</button>
             </a>
-          <button class="btnAddClass __fontColor">Dodaj lub usuń klasę</button>
+          <button class="btnAddClass __fontColor">Dodaj klasę</button>
+          <button class="btnDeleteClass __fontColor">Usuń klasę</button>
         </div>
     </div>
 
@@ -55,6 +56,7 @@ while($row3=$schoolNameConn->fetch()){
                 <thead class="thead-dark">
                     <tr>
                         <th scope="col" class='tableItem'>#</th>
+                        <th scope="col" class='tableItem'></th>
                         <th scope="col" class='tableItem'>KLASA</th>
                         <th scope="col" class='tableItem'>WEJŚCIE</th>
                     </tr>
@@ -66,7 +68,11 @@ while($row3=$schoolNameConn->fetch()){
                          $i++;
                         echo "<tr><th scope='row' class='tableItem'>$i</th>
                         <td class='tableItem d-none'>$row[0]</td>
-                        <td class='tableItem' id='choiceClassValue$i'>$row[1]</td>
+
+                        <td class='tableItem'><input type='checkbox'id='checkbox$i' class='classCheckbox''/></td>
+                    
+
+                        <td class='tableItem nameContent-checkbox$i' id='choiceClassValue$i'>$row[1]</td>
                         <td class='tableItem  d-none' id='choicePlaceValue$i'>$row[2]</td>
                         <td class='tableItem  d-none' id='choiceNeighName$i'>$row[3]</td>
                         <td class='tableItem'><i class='far fa-edit tableItem tdTableItem' id='$i'></i></td>
@@ -75,9 +81,9 @@ while($row3=$schoolNameConn->fetch()){
                 </tbody>
             </table>
             </div>
-            <input type="text" class="d-none" name="inputClassValue" id='inputClassValue'>
-            <input type="text" class="d-none" name="inputPlaceValue" id='inputPlaceValue'>
-            <input type="text" class="d-none" name="inputNeighClickValue" id='inputNeighClickValue'>
+            <input type="text" class="d-none" name="inputClassValue" id='inputClassValue' >
+            <input type="text" class="d-none" name="inputPlaceValue" id='inputPlaceValue' value="<?php echo $choiceSchoolID?>">
+            <input type="text" class="d-none" name="inputNeighClickValue" id='inputNeighClickValue' value="<?php echo $neighId?>">
             <button type="submit" class="d-none" id="btnSendChoiceFirstTable"></button>
             </form>
             </body>
