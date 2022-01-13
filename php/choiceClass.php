@@ -41,8 +41,8 @@ while($row3=$schoolNameConn->fetch()){
      <a href="../php/choiceInstitution.php" class="text-decoration-none">
               <button class="btnReturn __fontColor">Wstecz</button>
             </a>
-          <button class="btnAddClass __fontColor">Dodaj klasę</button>
-          <button class="btnDeleteClass __fontColor">Usuń klasę</button>
+          <button class="btnAddClass __fontColor">Dodaj Klasę</button>
+          <button class="btnDeleteClass __fontColor">Usuń Klasę</button>
         </div>
     </div>
 

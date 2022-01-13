@@ -1,7 +1,6 @@
 @import 'mainPage.css';
 @import 'choiceinstitution.css';
 @import 'addElementPopUp.css';
-@import 'choiceSchool.css';
 
 body {
     margin: 0;
@@ -13,7 +12,7 @@ body {
     --bs-gutter-x: 0 !important;
 }
 
-.__fontColor{
+.__fontColor {
     color: rgb(43, 66, 87);
 }
 
@@ -24,7 +23,19 @@ body {
     width: 100vw;
     height: 100vh;
     z-index: -100;
-background: linear-gradient(180deg, rgba(249,249,249,1) 17%, rgba(141,107,237,0.8318762203742718) 44%, rgba(86,146,214,0.8591750709489845) 68%, rgba(250,250,250,1) 94%);
+    background: linear-gradient(180deg, rgba(249, 249, 249, 1) 17%, rgba(141, 107, 237, 0.8318762203742718) 44%, rgba(86, 146, 214, 0.8591750709489845) 68%, rgba(250, 250, 250, 1) 94%);
 }
 
+.nav-link:hover {
+    /* box-sizing: content-box; */
+    /* font-size: 1.1rem; */
+    border-right: 1px solid #b5a0f5;
+    border-left: 1px solid #b5a0f5;
+    color: rgb(152, 136, 237) !important;
+    transition: .5s;
+}
 
+.navbar {
+    border-bottom: 1px solid rgb(224, 206, 228);
+
+}

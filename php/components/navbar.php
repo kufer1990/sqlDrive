@@ -1,12 +1,13 @@
 
 <style>
-  .nav-link:hover{
+  /* .nav-link:hover{
+    
 color:rgb(152, 136, 237)!important;
 transition: .5s;
-  }
+  } */
 </style>
 <!-- 248,249,250 -->
-<nav class="navbar navbar-expand-lg navbar-light p-3 border-bottom">
+<nav class="navbar navbar-expand-lg navbar-light p-3 ">
   <!-- <a class="navbar-brand m-3" href="#">Navbar</a> -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>

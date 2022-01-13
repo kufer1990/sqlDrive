@@ -30,7 +30,8 @@
 
 .formSectionNeigh,
 .formSectionSchool,
-.formSectionClass {
+.formSectionClass,
+.formSectionMember {
     visibility: hidden;
     position: fixed;
     top: 50%;

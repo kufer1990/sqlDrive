@@ -33,7 +33,10 @@
 .btnDeleteSchool,
 .btnReturn,
 .btnAddClass,
-.btnDeleteClass {
+.btnDeleteClass,
+.addMemberButton,
+.btnAddMember,
+.btnDeleteMember {
     width: 30%;
     padding: 5px 20px;
     font-size: 1.3rem;
@@ -47,7 +50,10 @@
 .btnDeleteSchool:hover,
 .btnReturn:hover,
 .btnAddClass:hover,
-.btnDeleteClass:hover {
+.btnDeleteClass:hover,
+.addMemberButton:hover,
+.btnAddMember:hover,
+.btnDeleteMember:hover {
     background-color: rgb(255, 255, 255);
     border: 1px solid white;
     ;

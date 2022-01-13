@@ -6,7 +6,7 @@ $whatRun= $_POST['whatRun'];
 if($whatRun==='neigh'||$whatRun==='deleteNeigh'||$whatRun==='deleteSchool'||$whatRun ==='deleteClass'){
     $sendElement = $_POST['sendElement'];
 }
-else if($whatRun==='addSchool'||$whatRun==='addClassToDb'){
+else if($whatRun==='addSchool'||$whatRun==='addClassToDb'||$whatRun==='addMember'){
     $sendElement=json_decode($_POST['sendElement']);
 }
 
@@ -26,6 +26,8 @@ if($whatRun==="neigh"){
     addClassToDb($sendElement);
 }else if($whatRun==='deleteClass'){
     deleteClassWithDB($sendElement);
+}else if($whatRun==='addMember'){
+    addMemberToDb($sendElement);
 }
 
 
@@ -83,3 +85,7 @@ while($row = $result->fetch()){
      echo "Element został usunięty";
 
 }
+
+function addMemberToDb($sendElement){
+    print_r($sendElement);
+};
