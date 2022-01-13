@@ -27,9 +27,9 @@ $result2 = $conn->query("SELECT * FROM `member` WHERE `ID_KLASA` = $idClass AND 
 }
 </style> -->
 <div class="container">
-    <div class="row sectionTitleChoiceInstitution">
+    <div class="row sectionTitleChoiceInstitution __fontColor">
         <div class="col-12 text-center mt-5 mb-5">
-            <h1><p>Wybierz Swój Okręg</p></h1>
+            <h3><p><?php echo $inputNeighClickValue." > ".$inputPlaceValue." > ".$inputClassValue; ?></p></h3>
         </div>
     </div>
     <div class="row justify-content-center">

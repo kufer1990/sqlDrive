@@ -59,3 +59,22 @@ function ajaxDeleteSchool(sendElement, whatRun) {
     }
 
 }
+
+
+
+
+
+
+// WYBÓR KLASY I PRZEJŚĆIE DO UCZNIÓW
+
+    const iconClickElement = [...document.querySelectorAll('.tdTableItem')];
+let choiceNeigh = "";
+iconClickElement.forEach(element => {
+    element.addEventListener('click', () => {
+                choiceClass = document.querySelector('#choiceClassValue' + element.id).textContent;
+
+        document.querySelector('#inputClassValue').value = choiceClass.toUpperCase();
+        document.querySelector('#btnSendChoiceFirstTable').click();
+           })
+});
+
