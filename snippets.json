@@ -1,0 +1,48 @@
+{
+	
+	"Print to console": {
+		"prefix": "cl",
+		"body": [
+			"console.log('$1');",
+			"$2"
+		],
+		"description": "Log output to console"
+	},
+
+	"documentquery": {
+		"prefix": "dqs",
+		"body": [
+			"document.querySelector('$1')",
+			"$2"
+		],
+		"description": "Log output to console"
+	},
+	"documentqueryAll": {
+		"prefix": "dqsa",
+		"body": [
+			"document.querySelectorAll('$1')",
+			"$2"
+		],
+		"description": "Log output to console"
+	},
+	"function": {
+		"prefix": "fn",
+		"body": [
+			"function name($1){};",
+			"$2"
+		],
+		"description": "Log output to console"
+	},
+	"addEventClick": {
+		"prefix": ".dd",
+		"body": [
+			".addEventListener('click', ()=>{$1})",
+			"$2"
+		],
+		"description": "Log output to console"
+	}
+	
+	
+
+
+}
