@@ -1,26 +1,56 @@
-.editMemberPopUp{
+.editMemberPopUp {
+    display: none;
     position: fixed;
-    top:0;
+    top: 0;
     height: 0;
     width: 100%;
     height: 100vh;
-    background-color: rgba(255, 0, 0, 0.458);
-    
+    background: rgb(249, 249, 249);
+    background: linear-gradient(180deg, rgba(249, 249, 249, 1) 17%, rgba(141, 107, 237, 0.85) 44%, rgba(86, 146, 214, 0.4307692307692308) 68%, rgba(250, 250, 250, 1) 94%);
+
 }
-.buttonCloseEditElement{
+
+.buttonCloseEditElement {
     position: absolute;
-    top:3%;
-    right:5%;
-    width:  6vh;
+    top: 3%;
+    right: 5%;
+    width: 6vh;
     height: 6vh;
+    border: 1px solid rgba(113, 113, 113, 0.437);
+    color: rgba(113, 113, 113, 0.437);
+
 }
 
-.editMemberSectionTwo{
-position: fixed;
-top:50%;
-left:50%;
-transform: translate(-50%,-50%);
-width: 100%;
-border:1px solid red;
+.buttonCloseEditElement:hover {
+    color: rgb(0, 0, 0);
+    border: 1px solid #000;
+    background-color: rgba(255, 255, 255, 0.226);
 }
 
+.editMemberSectionTwo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+
+}
+
+.sendUpdate {
+    margin-top: 30px;
+    width: 54%;
+    padding: 5px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+}
+
+.sendUpdate:hover {
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    border: 1px solid rgb(255, 255, 255);
+
+}
+
+.editInputItem {
+    border: 1px solid black;
+}

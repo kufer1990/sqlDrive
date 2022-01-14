@@ -1,10 +1,13 @@
 const iconElement = [...document.querySelectorAll('.tdTableItem')];
-
+//klik icon odpala ajax
 iconElement.forEach(element => {
     element.addEventListener('click',()=>{
 document.querySelector('#inputMemberValue').value = document.querySelector('#choiceMemberName'+element.id).textContent;
-    })
-    
+document.querySelector('.editMemberPopUp').style.display="block";
+let idMemberToChange = document.querySelector('#inputMemberValue');
+console.log(idMemberToChange.value);
+ajaxSend(idMemberToChange.value, "editMember")
+    })   
 });
 
 
@@ -39,18 +42,15 @@ if(nameAndLnameToDelete['name']>""){
 }
 })
 
-
+//visible popup dodania do bazy 
 const btnAddMember = document.querySelector('.btnAddMember');
 const btnDeleteMember = document.querySelector('.btnDeleteMember');
-
-
 btnAddMember.addEventListener('click', ()=>{
     document.querySelector('.addElementPopUp').style.visibility ="inherit";
     document.querySelector('.formSectionMember').style.visibility="inherit";
 })
 
 
-///////
 // dodanie ucznia
 document.querySelector('.addMemberButton').addEventListener('click', () => {
     const addMemberInput = [...document.querySelectorAll('.addMemberInput')];
@@ -103,20 +103,34 @@ function ajaxSend(sendElement, whatRun) {
     xhr = new XMLHttpRequest;
     xhr.onload = function () {
 
-        if (xhr.status === 200) {
+        if (xhr.status === 200 && whatRun!="editMember") {
             location.reload();
             alert(xhr.responseText);
  
+        }else{
+            //jezeli edytuje istniejacego ucznia to wpelnia inputy poprawnymi danymi z bazy
+            let memberInfo = JSON.parse(xhr.responseText);
+            const input = document.querySelectorAll('.editInputItem');
+            for (let index = 0; index < memberInfo.length; index++) {
+                input[index].value = memberInfo[index];              
+            }
         }
     }
+//jezeli chce poprawic istniejącego ucznia
+    if(whatRun==="editMember"){
+
+        xhr.open('POST', '../php/components/editMemberQuestoin.php', true);
+        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        xhr.send('sendElement='+sendElement);
+
+
+    }else{
+        //jeżeli chce dodac ucznia do bazy
     xhr.open('POST', '../php/components/addElementToDB.php', true);
     xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-
-
-    // xhr send jeżeli dodajemy okreg lub kasujemy
    if (whatRun == "addMember"||whatRun=="deleteMember") {
         xhr.send('whatRun='+whatRun+'&sendElement='+JSON.stringify(sendElement));
-   }
+   }}
 
 }
 
