@@ -1,18 +1,43 @@
-// const iconElement = [...document.querySelectorAll('.tdTableItem')];
+const iconElement = [...document.querySelectorAll('.tdTableItem')];
 
-// iconElement.forEach(element => {
-//     element.addEventListener('click',()=>{
-// console.log(element.id);
-// document.querySelector('#inputNeighClickValue').value = document.querySelector('#choiceNeighName'+element.id).textContent;
-// document.querySelector('#inputClassValue').value = document.querySelector('#choiceClassValue'+element.id).textContent;
-// document.querySelector('#inputPlaceValue').value = document.querySelector('#choicePlaceValue'+element.id).textContent;
-// document.querySelector('#btnSendChoiceFirstTable').click();
-
-//     })
+iconElement.forEach(element => {
+    element.addEventListener('click',()=>{
+document.querySelector('#inputMemberValue').value = document.querySelector('#choiceMemberName'+element.id).textContent;
+    })
     
-// });
+});
 
 
+
+
+
+
+
+//checkbox member
+let nameMemberToDelete ="";
+let lastNameMemberToDelete ="";
+// schoolCheckbox
+const arrayCheckBox= document.querySelectorAll('.schoolCheckbox');
+arrayCheckBox.forEach(element=>{
+element.addEventListener('click',()=>{
+nameMemberToDelete = document.querySelector(` #nameContent-${element.id}`).textContent;
+lastNameMemberToDelete = document.querySelector(` #lastNameContent-${element.id}`).textContent;
+
+
+})
+});
+//click delete member
+document.querySelector('.btnDeleteMember').addEventListener('click',()=>{
+
+let nameAndLnameToDelete = {
+    "name": nameMemberToDelete,
+    "lastName": lastNameMemberToDelete
+}
+console.log(nameAndLnameToDelete['name']);
+if(nameAndLnameToDelete['name']>""){
+    ajaxSend(nameAndLnameToDelete, 'deleteMember');
+}
+})
 
 
 const btnAddMember = document.querySelector('.btnAddMember');
@@ -49,18 +74,18 @@ document.querySelector('.addMemberButton').addEventListener('click', () => {
                     
 
 // stworzenie obiektu do przekazania ajaxowi
-            if(testArr.length==8){
+            if(testArr.length==9){
             
             let addMemberParameters = {
                 "name":testArr[0].toUpperCase(),
-                "lastName":testArr[0].toUpperCase(),
-                "street":testArr[1].toUpperCase(),
-                "numberHome":testArr[2].toUpperCase(),
-                "postCode":testArr[3].toUpperCase(),
-                "city":testArr[4].toUpperCase(),
-                "phoneOne":testArr[5].toUpperCase(),
-                "phoneTwo":testArr[6].toUpperCase(),
-                "status":testArr[7].toUpperCase(),
+                "lastName":testArr[1].toUpperCase(),
+                "street":testArr[2].toUpperCase(),
+                "numberHome":testArr[3].toUpperCase(),
+                "postCode":testArr[4].toUpperCase(),
+                "city":testArr[5].toUpperCase(),
+                "phoneOne":testArr[6].toUpperCase(),
+                "phoneTwo":testArr[7].toUpperCase(),
+                "status":testArr[8].toUpperCase(),
                 "idNeigh": document.querySelector('#inputNeighClickValue').value,
                 "idSchool": document.querySelector('#inputPlaceValue').value,
                 "idClass": document.querySelector('#inputClassValue').value
@@ -89,7 +114,7 @@ function ajaxSend(sendElement, whatRun) {
 
 
     // xhr send jeżeli dodajemy okreg lub kasujemy
-   if (whatRun == "addMember") {
+   if (whatRun == "addMember"||whatRun=="deleteMember") {
         xhr.send('whatRun='+whatRun+'&sendElement='+JSON.stringify(sendElement));
    }
 

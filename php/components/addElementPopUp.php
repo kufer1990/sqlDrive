@@ -51,29 +51,23 @@
 <div class="formSectionMember">
         
             <form method="POST">
-            <div class="row text-center ">
-                <div class="col-6 mt-2"><input class="text-center addMemberInput" type="text" placeholder="Imię"></div>
-                <div class="col-6 mt-2"><input class="text-center addMemberInput" type="text" placeholder="Nazwisko"></div>
-                <div class="col-6 mt-2"><input class="text-center addMemberInput" type="text" placeholder="Ulica"></div>
-                <div class="col-6 mt-2"><input class="text-center addMemberInput" type="text" placeholder="Nr Domu"></div>
-                <div class="col-6 mt-2"><input class="text-center addMemberInput" type="text" placeholder="Kod Pocztowy"></div>
-                <div class="col-6 mt-2"><input class="text-center addMemberInput" type="text" placeholder="Miejscowość"></div>
-                <div class="col-6 mt-2"><input class="text-center addMemberInput" type="text" placeholder="Numer Tel 1"></div>           
-                <div class="col-6 mt-2"><input class="text-center addMemberInput" type="text" placeholder="Numer Tel 2"></div>    
-                <div class="col-6 mt-2"><input class="text-center addMemberInput" type="text" placeholder="Status"></div>    
+            <div class="row text-center   justify-content-around ">
                 
-            
+                <div class="col-sm-12 col-md-4 col-lg-5 p-2"><input class="border border-dark text-center addMemberInput" type="text" placeholder="Imię"></div>
+                <div class="col-sm-12 col-md-4 col-lg-5 p-2"><input class="border border-dark text-center addMemberInput" type="text" placeholder="Nazwisko"></div>               
+                <div class="col-sm-12 col-md-4 col-lg-5 p-2"><input class="border border-dark text-center addMemberInput" type="text" placeholder="Ulica"></div>
+                <div class="col-sm-12 col-md-4 col-lg-5 p-2"><input class="border border-dark text-center addMemberInput" type="text" placeholder="Nr Domu"></div>
+                <div class="col-sm-12 col-md-4 col-lg-5 p-2"><input class="border border-dark text-center addMemberInput" type="text" placeholder="Kod Pocztowy"></div>
+                <div class="col-sm-12 col-md-4 col-lg-5 p-2"><input class="border border-dark text-center addMemberInput" type="text" placeholder="Miejscowość"></div>
+                <div class="col-sm-12 col-md-4 col-lg-5 p-2"><input class="border border-dark text-center addMemberInput" type="text" placeholder="Numer Tel 1"></div>           
+                <div class="col-sm-12 col-md-4 col-lg-5 p-2"><input class="border border-dark text-center addMemberInput" type="text" placeholder="Numer Tel 2"></div>    
+                <div class="col-sm-12 col-md-4 col-lg-5 p-2"><input class="border border-dark text-center addMemberInput" type="text" placeholder="Status"></div>               
             </form>
-            
             </div>
             <div class="row w-100 justify-content-center">
-            <div class="col-4"><button class=" w-100 h-100 addMemberButton border border-dark mt-2">Dodaj Element</button></div>
+            <div class="col-sm-3 col-md-5 text-center"><button class="p-2 addMemberButton border border-light mt-2">Dodaj Element</button></div>
             </div>
         </div>
-
-
-
-
     </div>
 </div>
 

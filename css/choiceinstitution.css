@@ -34,7 +34,6 @@
 .btnReturn,
 .btnAddClass,
 .btnDeleteClass,
-.addMemberButton,
 .btnAddMember,
 .btnDeleteMember {
     width: 30%;
@@ -45,13 +44,14 @@
     transition: .5s;
 }
 
+
+
 .btnAddInstitution:hover,
 .btnAddSchool:hover,
 .btnDeleteSchool:hover,
 .btnReturn:hover,
 .btnAddClass:hover,
 .btnDeleteClass:hover,
-.addMemberButton:hover,
 .btnAddMember:hover,
 .btnDeleteMember:hover {
     background-color: rgb(255, 255, 255);
@@ -68,10 +68,13 @@
     }
 
     .btnAddInstitution,
-    .btnAddSchool,
-    .btnDeleteSchool,
-    .btnReturn,
-    .btnAddClass {
+.btnAddSchool,
+.btnDeleteSchool,
+.btnReturn,
+.btnAddClass,
+.btnDeleteClass,
+.btnAddMember,
+.btnDeleteMember {
         margin: 1% 0;
         width: 100%;
     }

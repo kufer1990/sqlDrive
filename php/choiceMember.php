@@ -4,6 +4,7 @@ include 'components/navbar.php';
 include 'components/connect.php';
 include 'components/bgComponent.php';
 include 'components/addElementPopUp.php';
+include 'components/editMemberPopUp.php';
 
 
 $inputClassValue = $_POST['inputClassValue'];//klasa jako oznaczenie
@@ -58,12 +59,13 @@ $result2 = $conn->query("SELECT * FROM `member` WHERE `ID_KLASA` = $idClass AND 
     </div>
     <div class="row justify-content-center">
         <div class="col-md-12 col-lg-12">
-            <form action="choiceSchool.php" method="post">
+            <form method="post">
                 <div class="table-responsive">
             <table class="table text-center firstTableNeigh">
                 <thead class="thead-dark">
                     <tr>
                         <th scope="col" class='tableItem'>#</th>
+                        <th scope="col" class='tableItem'></th>
                         <th scope="col" class='tableItem'>IMIĘ</th>
                         <th scope="col" class='tableItem'>NAZWISKO</th>
                         <th scope="col" class='tableItem'>ADRES</th>
@@ -82,9 +84,10 @@ $result2 = $conn->query("SELECT * FROM `member` WHERE `ID_KLASA` = $idClass AND 
              while($row2=$result2->fetch()){
                  $i++;
                 echo "<tr><th scope='row' class='tableItem'>$i</th>
-                <td class='tableItem d-none' id='choiceNeighName$i'>$row2[0]</td>
-                <td class='tableItem'>$row2[1]</td>
-                <td class='tableItem'>$row2[2]</td>
+                <td class='tableItem d-none' id='choiceMemberName$i'>$row2[0]</td>
+                <td class='tableItem'><input type='checkbox'id='checkbox$i' class='schoolCheckbox''/></td>
+                <td class='tableItem' id='nameContent-checkbox$i'>$row2[1]</td>
+                <td class='tableItem' id='lastNameContent-checkbox$i'>$row2[2]</td>
                 <td class='tableItem'>$row2[3]</td>
                 <td class='tableItem'>$row2[4]</td>
                 <td class='tableItem'>$row2[5]</td>
@@ -98,9 +101,10 @@ $result2 = $conn->query("SELECT * FROM `member` WHERE `ID_KLASA` = $idClass AND 
                 </tbody>
             </table>
             </div>
-            <input type="text" class="d-none" name="inputClassValue" id='inputClassValue' value="<?php echo $idClass?>">
-            <input type="text" class="d-none" name="inputPlaceValue" id='inputPlaceValue' value="<?php echo $inputPlaceValue?>">
-            <input type="text" class="d-none" name="inputNeighClickValue" id='inputNeighClickValue' value="<?php echo $inputNeighClickValue?>">
+            <input type="text" class="" name="inputMemberValue" id='inputMemberValue'>
+            <input type="text" class="" name="inputClassValue" id='inputClassValue' value="<?php echo $idClass?>">
+            <input type="text" class="" name="inputPlaceValue" id='inputPlaceValue' value="<?php echo $inputPlaceValue?>">
+            <input type="text" class="" name="inputNeighClickValue" id='inputNeighClickValue' value="<?php echo $inputNeighClickValue?>">
          <button type="submit" class="d-none" id="btnSendChoiceFirstTable"></button>
             </form>
 

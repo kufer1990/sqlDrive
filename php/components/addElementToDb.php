@@ -6,7 +6,7 @@ $whatRun= $_POST['whatRun'];
 if($whatRun==='neigh'||$whatRun==='deleteNeigh'||$whatRun==='deleteSchool'||$whatRun ==='deleteClass'){
     $sendElement = $_POST['sendElement'];
 }
-else if($whatRun==='addSchool'||$whatRun==='addClassToDb'||$whatRun==='addMember'){
+else if($whatRun==='addSchool'||$whatRun==='addClassToDb'||$whatRun==='addMember'||$whatRun==='deleteMember'){
     $sendElement=json_decode($_POST['sendElement']);
 }
 
@@ -28,11 +28,11 @@ if($whatRun==="neigh"){
     deleteClassWithDB($sendElement);
 }else if($whatRun==='addMember'){
     addMemberToDb($sendElement);
+}else if($whatRun==='deleteMember'){
+    deleteMemberWithDB($sendElement);
 }
 
 
-
-////////////////////////////////////////////////////////tu jestem
 //definicja funkcji i jej zachowanie
 
 // add School
@@ -87,5 +87,13 @@ while($row = $result->fetch()){
 }
 
 function addMemberToDb($sendElement){
-    print_r($sendElement);
+    include 'connect.php';
+    $conn->query("INSERT INTO `member` VALUES ('','$sendElement->name','$sendElement->lastName','$sendElement->street','$sendElement->numberHome','$sendElement->postCode','$sendElement->city','$sendElement->phoneOne','$sendElement->phoneTwo','$sendElement->status','$sendElement->idClass','$sendElement->idSchool','$sendElement->idNeigh')");
+    echo "Element został dodany";
+};
+
+function deleteMemberWithDB($sendElement){
+    include 'connect.php';
+    $conn->query("DELETE FROM `member` WHERE `Imie` = '$sendElement->name' AND `Nazwisko` = '$sendElement->lastName'");
+    echo "Element został usunięty";
 };

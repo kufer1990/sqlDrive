@@ -7,7 +7,7 @@
     right: 3%;
     border: 1px solid rgba(113, 113, 113, 0.437);
     color: rgba(113, 113, 113, 0.437);
-    /* transition: .5s; */
+    
 }
 
 #closeButton:hover {
@@ -30,25 +30,36 @@
 
 .formSectionNeigh,
 .formSectionSchool,
-.formSectionClass,
-.formSectionMember {
+.formSectionClass {
     visibility: hidden;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
-
+.formSectionMember{
+    visibility: hidden;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width:100%;
+}
 .btnNeigh,
-.addSchollButton {
+.addSchollButton{
     background-color: rgb(255, 255, 255);
     border: 1px solid black;
-    /* transition: .5s; */
+}
+.addMemberButton{
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+    width: 100%;
 }
 
+
 .btnNeigh:hover,
-.addSchollButton:hover {
+.addSchollButton:hover,
+.addMemberButton:hover {
     background-color: rgba(255, 255, 255, 0);
     color: white;
     border: 1px solid rgb(255, 255, 255);
@@ -70,5 +81,19 @@
 @media(max-width:1000px) {
     .addElementPopUp {
         width: 100%;
+    }
+    .addMemberButton{
+        width: 100%;
+    }
+   
+}
+
+@media(max-width:765px) {
+    .addElementPopUp {
+        width: 100%;
+        height: 100vh;
+    }
+    .addMemberButton{
+        width: 50%;
     }
 }

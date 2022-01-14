@@ -1,6 +1,7 @@
 @import 'mainPage.css';
 @import 'choiceinstitution.css';
 @import 'addElementPopUp.css';
+@import 'editMemberPopUp.css';
 
 body {
     margin: 0;
