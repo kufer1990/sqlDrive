@@ -101,10 +101,10 @@ $result2 = $conn->query("SELECT * FROM `member` WHERE `ID_KLASA` = $idClass AND 
                 </tbody>
             </table>
             </div>
-            <input type="text" class="" name="inputMemberValue" id='inputMemberValue'>
-            <input type="text" class="" name="inputClassValue" id='inputClassValue' value="<?php echo $idClass?>">
-            <input type="text" class="" name="inputPlaceValue" id='inputPlaceValue' value="<?php echo $inputPlaceValue?>">
-            <input type="text" class="" name="inputNeighClickValue" id='inputNeighClickValue' value="<?php echo $inputNeighClickValue?>">
+            <input type="text" class="d-none" name="inputMemberValue" id='inputMemberValue'>
+            <input type="text" class="d-none" name="inputClassValue" id='inputClassValue' value="<?php echo $idClass?>">
+            <input type="text" class="d-none" name="inputPlaceValue" id='inputPlaceValue' value="<?php echo $inputPlaceValue?>">
+            <input type="text" class="d-none" name="inputNeighClickValue" id='inputNeighClickValue' value="<?php echo $inputNeighClickValue?>">
          <button type="submit" class="d-none" id="btnSendChoiceFirstTable"></button>
             </form>
 

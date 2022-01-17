@@ -38,7 +38,7 @@
             </div>
             <div class="row">
                 <div class="col-12 text-center">
-                    <input class="editInputItem m-2 p-1" type="text">
+                    <input class="d-none editInputItem status m-2 p-1" type="text" value="uczeń">
                 </div>
             </div>
             <div class="row justify-content-center">

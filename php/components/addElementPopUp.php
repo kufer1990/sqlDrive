@@ -61,7 +61,7 @@
                 <div class="col-sm-12 col-md-4 col-lg-5 p-2"><input class="border border-dark text-center addMemberInput" type="text" placeholder="Miejscowość"></div>
                 <div class="col-sm-12 col-md-4 col-lg-5 p-2"><input class="border border-dark text-center addMemberInput" type="text" placeholder="Numer Tel 1"></div>           
                 <div class="col-sm-12 col-md-4 col-lg-5 p-2"><input class="border border-dark text-center addMemberInput" type="text" placeholder="Numer Tel 2"></div>    
-                <div class="col-sm-12 col-md-4 col-lg-5 p-2"><input class="border border-dark text-center addMemberInput" type="text" placeholder="Status"></div>               
+                <div class="col-sm-12 col-md-4 col-lg-5 p-2"><input class="d-none border border-dark text-center addMemberInput" type="text" placeholder="Status" value="uczeń"></div>               
             </form>
             </div>
             <div class="row w-100 justify-content-center">
